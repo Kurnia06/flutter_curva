@@ -5,6 +5,7 @@ import 'package:flutter_curva/hal2.dart';
 import 'package:flutter_curva/hal3.dart';
 import 'package:flutter_curva/hal4.dart';
 import 'package:flutter_curva/hal5.dart';
+import 'package:flutter_curva/hal6.dart';
 
 class Navbar extends StatefulWidget {
   @override
@@ -13,18 +14,18 @@ class Navbar extends StatefulWidget {
 
 class _NavbarState extends State<Navbar> {
   int selectedpage = 0;
-  final _halaman = [Hal1(), Hal2(),Hal3(),Hal4(),Hal5()];
+  final _halaman = [Hal1(), Hal2(),Hal3(),Hal4(),Hal5(),Hal6()];
   final bgcolor = [Colors.white, Colors.white,
-    Colors.cyan, Colors.blue,Colors.green];
+    Colors.white, Colors.white,Colors.white, Colors.white];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: _halaman[selectedpage],
       bottomNavigationBar: CurvedNavigationBar(
           height: 50,
-          buttonBackgroundColor: Colors.blueGrey,
+          buttonBackgroundColor: Colors.deepOrange,
           backgroundColor: bgcolor[selectedpage],
-          color: Colors.blueGrey,
+          color: Colors.deepOrange,
           animationCurve: Curves.easeInOut,
           items: <Widget>[
             Icon(
@@ -44,7 +45,11 @@ class _NavbarState extends State<Navbar> {
               color: Colors.white,),
 
             Icon(
-              Icons.alarm_off,
+              Icons.person,
+              color: Colors.white,),
+
+            Icon(
+              Icons.app_registration,
               color: Colors.white,),
           ],
       onTap: (index){
