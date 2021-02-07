@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_curva/SecondScreen.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -69,7 +70,10 @@ class Hal6State extends State<Hal6> {
                             children: <Widget>[
                               FlatButton(
                                 child: const Text('LIHAT DETAIL'),
-                                onPressed: () { /* ... */ },
+                                onPressed: () {Navigator.push(context,
+                                    MaterialPageRoute(builder: (context)=>SecondScreen()),
+                                );
+                                },
                               ),
                               FlatButton(
                                 child: const Text('DENGARKAN'),
